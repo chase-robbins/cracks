@@ -14,8 +14,26 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+# Monodevelop / Visual Studio
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
+
 # Windows shortcuts
 *.lnk
+#unity Genorated-
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+UnityGenerated/
 
 # =========================
 # Operating System Files
