@@ -7,6 +7,7 @@ public class BallForce : MonoBehaviour {
 	[Tooltip("This is how fast the thing moves!")]
 	public float speed = 10;
 	public bool canFly = false;
+
 	void Start () {
 	
 	}
@@ -26,7 +27,10 @@ public class BallForce : MonoBehaviour {
 			if(x !=0) {direction.x = x * speed; }
 			if(y !=0) {direction.y = y * speed; }
 			r2d.velocity = direction;
+		}
 
+		if(Camera.main.transform.position.y + Camera.main.rect.height/2 < transform.position.y){
+			Debug.Log("icryyeveritiem/quiqscope/mlg/gg/wp/ESL/progamer/mumgetthecamera/");
 
 
 		}
