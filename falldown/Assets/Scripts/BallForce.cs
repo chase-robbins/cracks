@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class BallForce : MonoBehaviour {
-
 	// Use this for initialization
 	[Tooltip("This is how fast the thing moves!")]
 	public float speed = 10;
