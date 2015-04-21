@@ -30,9 +30,6 @@ public class BallForce : MonoBehaviour {
 		}
 
 		if(Camera.main.transform.position.y + Camera.main.rect.height/2 < transform.position.y){
-			Debug.Log("icryyeveritiem/quiqscope/mlg/gg/wp/ESL/progamer/mumgetthecamera/");
-
-
 		}
 	}
 }
