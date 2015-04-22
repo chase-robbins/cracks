@@ -6,8 +6,8 @@ public class start : MonoBehaviour {
 	private AudioSource tooMLG4U;
 	// Use this for initialization
 	void Start () {
-		tooMLG4U = GetComponent <AudioSource>();
-		tooMLG4U.PlayOneShot(tooMLG, 1.0f);
+//		tooMLG4U = GetComponent <AudioSource>();
+//		tooMLG4U.PlayOneShot(tooMLG, 1.0f);
 	}
 	
 	// Update is called once per frame
