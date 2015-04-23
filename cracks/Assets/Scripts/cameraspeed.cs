@@ -25,15 +25,6 @@ public class main : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update ()
-		//scorekeeper
-	if(transform.position.y <= tempPosY - 5){
-		currentScore = 0;
-		Debug.Log(currentScore);
-		currentScore = 0;
-		Debug.Log(currentScore);
-	}
-
-	tempPosY = transform.position.y;
 	{	
 		Vector3 camPos = transform.position;
 		float moveDelta = Time.deltaTime * cameraSpeedY;
