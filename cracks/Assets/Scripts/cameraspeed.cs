@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class main : MonoBehaviour {
+public class cameraspeed : MonoBehaviour {
 	public float currentScore = 0;
 	float tempPosY;
-	void Start() {
-		tempPosY = transform.position.y;
-	}
 	public float cameraSpeedY = 1;
 	public float cameraSpeedZ = 0;
 	public float cameraSpeedX = 0;
-
+	// Use this for initialization
+	void Start () {
+		tempPosY = transform.position.y;
+	}
 	public float distance = 0;
 
 	[Tooltip("The last placed block in the game")]
@@ -18,10 +18,7 @@ public class main : MonoBehaviour {
 
 	public float margin = 5;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+
 	
 	// Update is called once per frame
 	void Update ()
