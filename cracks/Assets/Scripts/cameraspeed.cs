@@ -7,6 +7,7 @@ public class cameraspeed : MonoBehaviour {
 	public float cameraSpeedY = 1;
 	public float cameraSpeedZ = 0;
 	public float cameraSpeedX = 0;
+	public UnityEngine.UI.Text scoreText;
 	// Use this for initialization
 	void Start () {
 		tempPosY = transform.position.y;
@@ -17,8 +18,6 @@ public class cameraspeed : MonoBehaviour {
 	public GameObject previousBlock;
 
 	public float margin = 1;
-
-
 	
 	// Update is called once per frame
 	void Update ()
@@ -42,7 +41,10 @@ public class cameraspeed : MonoBehaviour {
 		GameObject newBlock = Instantiate(previousBlock);
 		Vector3 p = newBlock.transform.position;
 		p.y -= margin;
+//		p.x = Random.RandomRange(-6.0f, 6.0f);
 		newBlock.transform.position = p;
-		previousBlock = newBlock;
+		previousBlock = newBlock;	
+		scoreTrigger st = newBlock.GetComponent<scoreTrigger>();
+		st.scoreText = scoreText;
 	}
 }

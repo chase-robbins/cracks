@@ -17,7 +17,7 @@ public class gg : MonoBehaviour {
 		if(glhf.gameObject.tag == "Player"){
 			Application.LoadLevel ("mainmenu");
 			Debug.Log("ggwp");
-
+			scoreTrigger.score = 0;
 		}
 	}
 
