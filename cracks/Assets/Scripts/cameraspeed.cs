@@ -16,7 +16,7 @@ public class cameraspeed : MonoBehaviour {
 	[Tooltip("The last placed block in the game")]
 	public GameObject previousBlock;
 
-	public float margin = 5;
+	public float margin = 1;
 
 
 	
