@@ -12,4 +12,9 @@ public class backtomain : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void WhateverILike () {
+
+		Application.LoadLevel ("mainmenu");
+	}
 }
