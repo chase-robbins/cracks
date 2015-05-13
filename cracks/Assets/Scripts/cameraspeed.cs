@@ -7,12 +7,29 @@ public class cameraspeed : MonoBehaviour {
 	public float cameraSpeedY = 1;
 	public float cameraSpeedZ = 0;
 	public float cameraSpeedX = 0;
+	public int balance;
 	public UnityEngine.UI.Text scoreText;
 	// Use this for initialization
 	void Start () {
 		tempPosY = transform.position.y;
+
+
+		if(PlayerPrefs.HasKey("balance")){
+			balance = PlayerPrefs.GetInt("balance");
+			print ("balance set, it is "+balance);
+		} else {
+			print("balance not set");
+		}
+
 	}
 	public float distance = 0;
+
+	//when level ends or when camera is destroyed
+	void OnDestroy () {
+		PlayerPrefs.SetInt ("balance", balance);
+		print ("saving balance as: " + balance);
+	}
+
 
 	[Tooltip("The last placed block in the game")]
 	public GameObject previousBlock;

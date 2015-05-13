@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class storebutton : MonoBehaviour {
 
 	// Use this for initialization
@@ -13,7 +14,7 @@ public class storebutton : MonoBehaviour {
 	
 	}
 
-	public void WhateverILike(){
-		Application.LoadLevel ("scores");
+	public void loadstore(){
+		Application.LoadLevel ("store");
 	}
 }
