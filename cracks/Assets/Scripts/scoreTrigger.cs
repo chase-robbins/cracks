@@ -7,7 +7,7 @@ public class scoreTrigger : MonoBehaviour {
 	//	public int totalScore;
 	void OnTriggerEnter2D(Collider2D sweg){
 		score++;
-		Debug.Log ("SWAG");
+		Debug.Log ("crossed line");
 		//		totalScore++;
 		scoreText.text = "Score: " + score;
 	}
