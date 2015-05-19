@@ -7,7 +7,7 @@ public class cameraspeed : MonoBehaviour {
 	public float cameraSpeedY = 1;
 	public float cameraSpeedZ = 0;
 	public float cameraSpeedX = 0;
-	public int balance;
+	public int balance = 0;
 	public UnityEngine.UI.Text scoreText;
 	// Use this for initialization
 	void Start () {
