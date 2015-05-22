@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class cameraspeed : MonoBehaviour {
 	public float currentScore = 0;
@@ -8,7 +9,7 @@ public class cameraspeed : MonoBehaviour {
 	public float cameraSpeedZ = 0;
 	public float cameraSpeedX = 0;
 	public int balance = 0;
-	public UnityEngine.UI.Text scoreText;
+	public Text scoreText;
 	// Use this for initialization
 	void Start () {
 		tempPosY = transform.position.y;
