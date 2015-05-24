@@ -65,4 +65,4 @@ public class cameraspeed : MonoBehaviour {
 		scoreTrigger st = newBlock.GetComponent<scoreTrigger>();
 		st.scoreText = scoreText;
 	}
-e}
+}
