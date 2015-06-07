@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class cameraspeed : MonoBehaviour {
 	public float currentScore = 0;
+	public float previousScore;
 	float tempPosY;
 	public float cameraSpeedY = 1;
 	public float cameraSpeedZ = 0;
@@ -27,6 +28,7 @@ public class cameraspeed : MonoBehaviour {
 
 	//when level ends or when camera is destroyed
 	void OnDestroy () {
+		previousScore = currentScore;
 		PlayerPrefs.SetInt ("balance", balance);
 		print ("saving balance as: " + balance);
 	}
@@ -35,7 +37,7 @@ public class cameraspeed : MonoBehaviour {
 	[Tooltip("The last placed block in the game")]
 	public GameObject previousBlock;
 
-	public float margin = 1;
+	public float margin = 0.5f;
 	
 	// Update is called once per frame
 	void Update ()
@@ -48,7 +50,7 @@ public class cameraspeed : MonoBehaviour {
 //		transform.position = new Vector3 (cameraSpeedX + transform.position.x, cameraSpeedY + transform.position.y, transform.position.z);
 //		Debug.Log (camPos);
 
-		if (distance > margin - 1) {
+		if (distance > margin - 0.5) {
 		//create a new block
 			CreateANewBlock();
 			distance -= margin;
