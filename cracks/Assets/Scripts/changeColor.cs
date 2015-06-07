@@ -16,7 +16,7 @@ public class changeColor : MonoBehaviour {
 	void Update () {
 		if (scoreTrigger.score > 50 && scoreTrigger.score < 100){
 
-			line..material.color = Color.red;
+//			line..material.color = Color.red;
 
 
 		}
