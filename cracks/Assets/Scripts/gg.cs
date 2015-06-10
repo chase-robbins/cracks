@@ -18,7 +18,7 @@ public class gg : MonoBehaviour {
 			Application.LoadLevel ("gameover");
 			cspeed.balance += scoreTrigger.score;
 			Debug.Log("ggwp");
-			scoreTrigger.score = 0;
+//			scoreTrigger.score = 0;
 //			PlayerPrefs.SetInt("balance", cspeed.balance + scoreTrigger.score);
 
 		}

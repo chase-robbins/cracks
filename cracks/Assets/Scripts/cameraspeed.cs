@@ -3,17 +3,19 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class cameraspeed : MonoBehaviour {
-	public float currentScore = 0;
+	public bool genBlocks;
+//	public float currentScore = 0;
 	public float previousScore;
-	float tempPosY;
+//	float tempPosY;
 	public float cameraSpeedY = 1;
 	public float cameraSpeedZ = 0;
 	public float cameraSpeedX = 0;
 	public int balance = 0;
 	public Text scoreText;
+
 	// Use this for initialization
 	void Start () {
-		tempPosY = transform.position.y;
+//		tempPosY = transform.position.y;
 
 
 		if(PlayerPrefs.HasKey("balance")){
@@ -28,9 +30,11 @@ public class cameraspeed : MonoBehaviour {
 
 	//when level ends or when camera is destroyed
 	void OnDestroy () {
-		previousScore = currentScore;
+		previousScore = scoreTrigger.score;
 		PlayerPrefs.SetInt ("balance", balance);
 		print ("saving balance as: " + balance);
+		PlayerPrefs.SetInt ("lastScore", (int)scoreTrigger.score);
+		Debug.Log ("Saving 1337 last score" + scoreTrigger.score);
 	}
 
 
@@ -58,13 +62,15 @@ public class cameraspeed : MonoBehaviour {
 
 	}
 	void CreateANewBlock(){
-		GameObject newBlock = Instantiate(previousBlock);
-		Vector3 p = newBlock.transform.position;
-		p.y -= margin;
+		if (genBlocks == true) {
+			GameObject newBlock = Instantiate (previousBlock);
+			Vector3 p = newBlock.transform.position;
+			p.y -= margin;
 //		p.x = Random.RandomRange(-6.0f, 6.0f);
-		newBlock.transform.position = p;
-		previousBlock = newBlock;	
-		scoreTrigger st = newBlock.GetComponent<scoreTrigger>();
-		st.scoreText = scoreText;
+			newBlock.transform.position = p;
+			previousBlock = newBlock;	
+			scoreTrigger st = newBlock.GetComponent<scoreTrigger> ();
+			st.scoreText = scoreText;
+		}
 	}
 }

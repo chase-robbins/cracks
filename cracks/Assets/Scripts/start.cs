@@ -17,6 +17,8 @@ public class start : MonoBehaviour {
 
 	//start script
 	public void WhateverILike(){
+
+		scoreTrigger.score = 0;
 		Application.LoadLevel ("scene2d");
 
 	}
