@@ -14,7 +14,7 @@ public class storebutton : MonoBehaviour {
 	
 	}
 
-	public void loadstore(){
+	public void loadstore(int swaginabag){
 		Application.LoadLevel ("store");
 	}
 }

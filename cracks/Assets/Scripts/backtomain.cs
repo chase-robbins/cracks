@@ -17,4 +17,8 @@ public class backtomain : MonoBehaviour {
 
 		Application.LoadLevel ("mainmenu");
 	}
+	void WhateverILike2 (int yee) {
+
+		Application.LoadLevel ("mainmenu");
+	}
 }
