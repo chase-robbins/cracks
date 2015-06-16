@@ -3,8 +3,8 @@ using System.Collections;
 
 public class turtle : MonoBehaviour {
 
-	public cameraspeed crying;
-	public gameTimer tears;
+	public cameraspeed csScript;
+//	public gameTimer timer;
 	public float startTime = 0;
 	public float waitTimeTurtle = 0;
 	public float speedChange = 2.0f;
@@ -14,15 +14,15 @@ public class turtle : MonoBehaviour {
 	void OnTriggerEnter2D () {
 		needToBeChecked = true;
 		startTime = Time.time;
-		crying.cameraSpeedY  -= speedChange;
+		csScript.cameraSpeedY  -= speedChange;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(Time.time > startTime + 3000 && needToBeChecked){
 			needToBeChecked = false;
-			crying.cameraSpeedY  += speedChange;	
+			csScript.cameraSpeedY  += speedChange;	
 		}
-		Debug.Log ("Camera Speed is " + crying.cameraSpeedY);	
+		Debug.Log ("Camera Speed is " + csScript.cameraSpeedY);	
 	}
 }
