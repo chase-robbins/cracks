@@ -12,6 +12,7 @@ public class cameraspeed : MonoBehaviour {
 	public float cameraSpeedX = 0;
 	public int balance = 0;
 	public Text scoreText;
+	public ParticleSystem bottomParticles;
 
 	// Use this for initialization
 	void Start () {

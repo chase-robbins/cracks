@@ -13,7 +13,7 @@ public class startLocations : MonoBehaviour {
 		transform.position = new Vector2 (Random.Range(-5.0f, 5.0f), transform.position.y);
 		int percentage = (Random.Range(0, 100));
 //		Debug.Log(percentage);
-		if (percentage >= 50) {
+		if (percentage >= 96) {
 			turtlePrefab.SetActive(true);
 		}
 	}
